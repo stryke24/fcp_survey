@@ -1,172 +1,206 @@
-
-<style>
-  body {
-    background-color: #2f69a3;
-  }
-
-  html {
-    display: flex;
-  }
-</style>
-
-<html>
-  <body>
-    
-  <div id="app"></div>
-  <script src="bundle.js"></script>
-  <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
-
-  <h1 id="title">My survey</h1>
-  <p id="description">This will be a survey!</p>
-
-  <form class="form-control" id="survey-form">
-    <label id="name-label" for="name">Name</label>
-    <input id="name" type="text" placeholder="required" required />
-
-    <label id="email-label" for="email">Email Address</label>
-    <input
-      id="email"
-      type="email"
-      placeholder="valid email required"
-      required
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
 
-    <label id="number-label" for="number">Age</label>
-    <input id="number" type="number" placeholder="1-150" min="1" max="150" />
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
 
-    <label id="dropdown-label" for="dropdown">Fave Color</label>
-    <select id="dropdown">
-      <option value="red">Red</option>
-      <option value="blue">Blue</option>
-      <option value="green">Green</option>
-      <option value="yellow">Yellow</option>
-    </select>
-    <p>Prefered Pronown</p>
-    <label for="he">
-      <input
-        class="input-radio"
-        id="he"
-        type="radio"
-        value="he"
-        name="pronown"
-      />He
-    </label>
-    <label for="she">
-      <input
-        class="input-radio"
-        id="she"
-        type="radio"
-        value="she"
-        name="pronown"
-      />She
-    </label>
-    <label for="they">
-      <input
-        class="input-radio"
-        id="they"
-        type="radio"
-        value="they"
-        name="pronown"
-      />They
-    </label>
-    <label for="ze">
-      <input
-        class="input-radio"
-        id="ze"
-        type="radio"
-        value="ze"
-        name="pronown"
-      />Ze
-    </label>
-    <label for="notlistes">
-      <input
-        class="input-radio"
-        id="notlisted"
-        type="radio"
-        value="notlisted"
-        name="pronown"
-      />Not listed
-    </label>
-    <label for="nopref">
-      <input
-        class="input-radio"
-        id="nopref"
-        type="radio"
-        value="nopref"
-        name="pronown"
-      />No preference
-    </label>
+    <title>My Survey</title>
+  </head>
+  <div class="container">
+    <body>
+      <div id="app"></div>
+      <script src="bundle.js"></script>
+      <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+      <div>
+        <h1 id="title">My survey</h1>
+        <p id="description">This will be a survey!</p>
+      </div>
+      <form id="survey-form">
+        <div class="form-group">
+          <label id="name-label" for="name">Name</label>
+          <input
+            id="name"
+            type="text"
+            class="form-control"
+            placeholder="required"
+            required
+          />
+        </div>
 
-    <p>What takeout foods do you like? (Check all that apply)</p>
-    <label for="pizza">
-      <input
-        class="input-checkbox"
-        id="pizza"
-        value="pizza"
-        type="checkbox"
-        name="food"
-      />Pizza
-    </label>
-    <label for="indian">
-      <input
-        class="input-checkbox"
-        id="indian"
-        value="indian"
-        type="checkbox"
-        name="food"
-      />Indian
-    </label>
-    <label for="chinese">
-      <input
-        class="input-checkbox"
-        id="chinese"
-        value="chinese"
-        type="checkbox"
-        name="food"
-      />Chinese
-    </label>
-    <label for="thai">
-      <input
-        class="input-checkbox"
-        id="thai"
-        value="thai"
-        type="checkbox"
-        name="food"
-      />Thai
-    </label>
-    <label for="bbq">
-      <input
-        class="input-checkbox"
-        id="bbq"
-        value="bbq"
-        type="checkbox"
-        name="food"
-      />BBQ
-    </label>
-    <label for="burgers">
-      <input
-        class="input-checkbox"
-        id="burgers"
-        value="burgers"
-        type="checkbox"
-        name="food"
-      />Burgers
-    </label>
-    <label for="mexican">
-      <input
-        class="input-checkbox"
-        id="mexican"
-        value="mexican"
-        type="checkbox"
-        name="food"
-      />Mexican
-    </label>
-    <div>
-      <label for="comments">Comments </label>
-      <textarea id="comments" class="input-textarea" name="comments">
-      </textarea>
-    </div>
-    <button id="submit" class="submit-button">Submit</button>
-  </form>
-  <body>
+        <div class="form-group">
+          <label id="email-label" for="email">Email Address</label>
+          <input
+            id="email"
+            type="email"
+            class="form-control"
+            placeholder="valid email required"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label id="number-label" for="number">Age</label>
+          <input
+            id="number"
+            type="number"
+            class="form-control"
+            placeholder="1-150"
+            min="1"
+            max="150"
+          />
+        </div>
+        <div>
+          <label id="dropdown-label" for="dropdown">Fave Color</label>
+          <select class="custom-select" id="dropdown">
+            <option value="red">Red</option>
+            <option value="blue">Blue</option>
+            <option value="green">Green</option>
+            <option value="yellow">Yellow</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <p>Prefered Pronown</p>
+
+          <div class="form-check">
+            <input
+              class="input-radio"
+              id="he"
+              type="radio"
+              value="he"
+              name="pronown"
+            />
+            <label for="he"> He </label>
+          </div>
+
+          <div class="form-check">
+            <input
+              class="input-radio"
+              id="she"
+              type="radio"
+              value="she"
+              name="pronown"
+            />
+            <label for="she"> She </label>
+          </div>
+
+          <div class="form-check">
+            <input
+              class="input-radio"
+              id="they"
+              type="radio"
+              value="they"
+              name="pronown"
+            />
+            <label for="they"> They </label>
+          </div>
+
+          <div class="form-check">
+            <input
+              class="input-radio"
+              id="notlisted"
+              type="radio"
+              value="notlisted"
+              name="pronown"
+            />
+            <label for="notlisted"> Not listed </label>
+          </div>
+          <div class="form-check">
+            <input
+              class="input-radio"
+              id="nopref"
+              type="radio"
+              value="nopref"
+              name="pronown"
+            />
+            <label for="nopref"> No preference </label>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <p>What takeout foods do you like? (Check all that apply)</p>
+
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              id="pizza"
+              value="pizza"
+              type="checkbox"
+              name="food"
+            />
+            <label class="form-check-label" for="pizza">Pizza</label>
+          </div>
+
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              id="indian"
+              value="indian"
+              type="checkbox"
+              name="food"
+            />
+            <label class="form-check-label" for="indian">Indian</label>
+          </div>
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              id="chinese"
+              value="chinese"
+              type="checkbox"
+              name="food"
+            />
+            <label class="form-check-label" for="chinese"> Chinese</label>
+          </div>
+
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              id="thai"
+              value="thai"
+              type="checkbox"
+              name="food"
+            />
+            <label class="form-check-label" for="thai"> Thai </label>
+          </div>
+        </div>
+
+        <div class="input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text">Comments</span>
+          </div>
+          <textarea class="form-control" aria-label="Comments"></textarea>
+        </div>
+
+        <button id="submit" class="btn btn-primary">Submit</button>
+      </form>
+
+      <!-- Optional JavaScript -->
+      <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+      <script
+        src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"
+      ></script>
+      <script
+        src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"
+      ></script>
+      <script
+        src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"
+      ></script>
+    </body>
+  </div>
 </html>
