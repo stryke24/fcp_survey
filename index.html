@@ -1,0 +1,165 @@
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+<style>
+  body {
+    background-color: #2f69a3;
+  }
+
+  html {
+    display: flex;
+  }
+</style>
+
+<html>
+  <h1 id="title">My survey</h1>
+  <p id="description">This will be a survey!</p>
+
+  <form class="form-control" id="survey-form">
+    <label id="name-label" for="name">Name</label>
+    <input id="name" type="text" placeholder="required" required />
+
+    <label id="email-label" for="email">Email Address</label>
+    <input
+      id="email"
+      type="email"
+      placeholder="valid email required"
+      required
+    />
+
+    <label id="number-label" for="number">Age</label>
+    <input id="number" type="number" placeholder="1-150" min="1" max="150" />
+
+    <label id="dropdown-label" for="dropdown">Fave Color</label>
+    <select id="dropdown">
+      <option value="red">Red</option>
+      <option value="blue">Blue</option>
+      <option value="green">Green</option>
+      <option value="yellow">Yellow</option>
+    </select>
+    <p>Prefered Pronown</p>
+    <label for="he">
+      <input
+        class="input-radio"
+        id="he"
+        type="radio"
+        value="he"
+        name="pronown"
+      />He
+    </label>
+    <label for="she">
+      <input
+        class="input-radio"
+        id="she"
+        type="radio"
+        value="she"
+        name="pronown"
+      />She
+    </label>
+    <label for="they">
+      <input
+        class="input-radio"
+        id="they"
+        type="radio"
+        value="they"
+        name="pronown"
+      />They
+    </label>
+    <label for="ze">
+      <input
+        class="input-radio"
+        id="ze"
+        type="radio"
+        value="ze"
+        name="pronown"
+      />Ze
+    </label>
+    <label for="notlistes">
+      <input
+        class="input-radio"
+        id="notlisted"
+        type="radio"
+        value="notlisted"
+        name="pronown"
+      />Not listed
+    </label>
+    <label for="nopref">
+      <input
+        class="input-radio"
+        id="nopref"
+        type="radio"
+        value="nopref"
+        name="pronown"
+      />No preference
+    </label>
+
+    <p>What takeout foods do you like? (Check all that apply)</p>
+    <label for="pizza">
+      <input
+        class="input-checkbox"
+        id="pizza"
+        value="pizza"
+        type="checkbox"
+        name="food"
+      />Pizza
+    </label>
+    <label for="indian">
+      <input
+        class="input-checkbox"
+        id="indian"
+        value="indian"
+        type="checkbox"
+        name="food"
+      />Indian
+    </label>
+    <label for="chinese">
+      <input
+        class="input-checkbox"
+        id="chinese"
+        value="chinese"
+        type="checkbox"
+        name="food"
+      />Chinese
+    </label>
+    <label for="thai">
+      <input
+        class="input-checkbox"
+        id="thai"
+        value="thai"
+        type="checkbox"
+        name="food"
+      />Thai
+    </label>
+    <label for="bbq">
+      <input
+        class="input-checkbox"
+        id="bbq"
+        value="bbq"
+        type="checkbox"
+        name="food"
+      />BBQ
+    </label>
+    <label for="burgers">
+      <input
+        class="input-checkbox"
+        id="burgers"
+        value="burgers"
+        type="checkbox"
+        name="food"
+      />Burgers
+    </label>
+    <label for="mexican">
+      <input
+        class="input-checkbox"
+        id="mexican"
+        value="mexican"
+        type="checkbox"
+        name="food"
+      />Mexican
+    </label>
+    <div>
+      <label for="comments">Comments </label>
+      <textarea id="comments" class="input-textarea" name="comments">
+      </textarea>
+    </div>
+    <button id="submit" class="submit-button">Submit</button>
+  </form>
+</html>
